@@ -28,7 +28,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    me: [User]
+    me: User
   }
 
   type Mutation {
@@ -38,7 +38,9 @@ const typeDefs = gql`
       authors: [String]
       bookId: String!
       image: String!
-      link: String!
+      link: String
+      title: String!
+      description: String!
     ): User
     removeBook(bookId: String!): User
   }
